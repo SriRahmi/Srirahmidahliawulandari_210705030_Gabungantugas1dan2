@@ -1,0 +1,281 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background-color: #fefefe;  /* Off-white background */
+  color: #222222;  /* Dark gray text color */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff6347;  /* Tomato color for hover links */
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+header {
+  position: relative;
+  font-family: cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 10px auto 20px;
+  padding: 10px 20px;
+
+  background: linear-gradient(90deg, #6a5acd, #ff69b4);  /* Purple to hot pink gradient */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-size: 1.1rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffd700;  /* Gold color on hover */
+  transform: scale(1.1);
+}
+
+/* Main Section */
+main {
+  padding: 50px 20px;
+}
+
+.konten-utama {
+  text-align: center;
+  position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-color: #b22222;  /* Firebrick red background */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: -50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  transition: transform 0.3s;
+}
+
+.hero-section:hover .hero-image {
+  transform: scale(1.1);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background-color: #008080;  /* Teal button */
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ff4500;  /* Orange red hover effect */
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Keunggulan Section */
+.keunggulan {
+  background-color: #f0f8ff;  /* Alice blue background */
+  padding: 40px 20px;
+}
+
+.keunggulan h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.keunggulan p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.animated-icon {
+  font-size: 3rem;
+  margin: 0 15px;
+  animation: bounce 2s infinite;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.animated-icon:hover {
+  transform: scale(1.2);
+  color: #ff1493;  /* Deep pink for hover icons */
+}
+
+/* Informasi Section */
+.informasi {
+  padding: 50px 20px;
+  background-color: #fffacd;  /* Lemon chiffon background */
+}
+
+.informasi h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.informasi-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.informasi-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.informasi-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.informasi-item i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #008080;  /* Teal for icons */
+}
+
+.informasi-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.informasi-item p {
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #ff6347;  /* Tomato footer */
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1rem;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .hero-text h2 {
+      font-size: 2rem;
+  }
+
+  .hero-text p {
+      font-size: 1rem;
+  }
+
+  .keunggulan p {
+      font-size: 1rem;
+  }
+
+  .informasi-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .informasi-item {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
